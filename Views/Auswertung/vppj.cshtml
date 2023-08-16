@@ -1,0 +1,22 @@
+﻿@model List<Vppj>
+
+<h1>Vorgänge pro Objekt pro Jahre</h1>
+
+<table>
+    <tr>
+        <th>Telemetrie ID</th>
+        <th>Objekt Nr</th>
+        <th>Jahr</th>
+        <th>Vorgänge</th>
+    </tr>
+    @foreach (Vppj vorgang in Model)
+    {
+        <tr>
+            <td>@vorgang.TelemetryId</td>
+            <td>@vorgang.ObjNr</td>
+            <td>@vorgang.Jahr</td>
+            <td>@vorgang.VorgaengeProObjektProJahre</td>
+        </tr>
+    }
+
+</table>

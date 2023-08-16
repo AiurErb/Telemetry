@@ -1,0 +1,6 @@
+﻿@model CustomerDetails
+<h1>@Model.KundenNr</h1>
+@{
+var vorgaenge = Model.VorgaengeneProjecte;
+}
+<partial name = "vppj" model = "vorgaenge" />

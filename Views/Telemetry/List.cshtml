@@ -1,0 +1,26 @@
+﻿@model List<TelemetryItem>
+
+<table style="width:100%">
+    <caption>Telemetry data</caption>
+    <tr>
+        <th>ID</th>
+        <th>CrateDate</th>
+        <th>Kunden Nr</th>
+        <th>IP</th>
+        <th>Client Version</th>
+        <th>Server Version</th>        
+    </tr>
+    @foreach (TelemetryItem item in Model)
+    {
+        <tr>
+            <td><a href="/telemetry/details/@item.Id">@item.Id</a></td>
+            <td>@item.CreateDate</td>
+            <td>@item.KundenNr</td>
+            <td>@item.IP</td>
+            <td>@item.ClientVersion</td>
+            <td>@item.ServerVersion</td>
+        </tr>
+
+    }
+</table>
+

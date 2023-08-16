@@ -1,0 +1,106 @@
+{
+  "mysqlnew": "Server=localhost;User ID=telemetry_parser;Password=telemetry_parser;Database=telemetry_data",
+  "mysqlraw": "Server=localhost;User ID=telemetry_parser;Password=telemetry_parser;Database=telemetry_parser",
+
+  "tables": [
+    {
+      "path": "$.SqlContent.SqlResults[?(@.Name == 'DrkSpoolCountByUser')].Rows[*]",
+      "tableName": "DrkSpoolCountByUser",
+      "mappings": [
+        {
+          "jsonName": "AnonymUserNr",
+          "dbName": "AnonymUserNr",
+          "field": "string"
+        },
+        {
+          "jsonName": "DruckAuftraege",
+          "dbName": "DruckAuftraege",
+          "field": "int"
+        }
+      ]
+    },
+    {
+      "path": "$.SqlContent.SqlResults[?(@.Name == 'Druckauftraege')].Rows[*]",
+      "tableName": "Druckauftraege",
+      "mappings": [
+        {
+          "jsonName": "Druckauftraege",
+          "dbName": "Druckauftraege",
+          "field": "int"
+        }
+      ]
+    },
+    {
+      "path": "$.SqlContent.SqlResults[?(@.Name == 'VorgaengeProObjektProJahre')].Rows[*]",
+      "tableName": "VorgaengeProObjektProJahre",
+      "mappings": [
+        {
+          "jsonName": "ObjNr",
+          "dbName": "ObjNr",
+          "field": "int"
+        },
+        {
+          "jsonName": "Jahr",
+          "dbName": "Jahr",
+          "field": "int"
+        },
+        {
+          "jsonName": "VorgaengeProObjektProJahre",
+          "dbName": "VorgaengeProObjektProJahre",
+          "field": "decimal"
+        }
+      ]
+    },
+    {
+      "path": "$.SqlContent.SqlResults[?(@.Name == 'Objekte')].Rows[*]",
+      "tableName": "Objekte",
+      "mappings": [
+        {
+          "jsonName": "Anzahl_Wija_0",
+          "dbName": "Anzahl_Wija_0",
+          "field": "int"
+        },
+        {
+          "jsonName": "Anzahl_Wija_1",
+          "dbName": "Anzahl_Wija_1",
+          "field": "int"
+        },
+        {
+          "jsonName": "Anzahl_Wija_2",
+          "dbName": "Anzahl_Wija_2",
+          "field": "int"
+        },
+        {
+          "jsonName": "MinCreateDate_Wija_0",
+          "dbName": "MinCreateDate_Wija_0",
+          "field": "datetime"
+        },
+        {
+          "jsonName": "MaxCreateDate_Wija_0",
+          "dbName": "MaxCreateDate_Wija_0",
+          "field": "datetime"
+        },
+        {
+          "jsonName": "MinCreateDate_Wija_1",
+          "dbName": "MinCreateDate_Wija_1",
+          "field": "datetime"
+        },
+        {
+          "jsonName": "MaxCreateDate_Wija_1",
+          "dbName": "MaxCreateDate_Wija_1",
+          "field": "datetime"
+        },
+        {
+          "jsonName": "MinCreateDate_Wija_2",
+          "dbName": "MinCreateDate_Wija_2",
+          "field": "datetime"
+        },
+        {
+          "jsonName": "MaxCreateDate_Wija_2",
+          "dbName": "MaxCreateDate_Wija_2",
+          "field": "datetime"
+        }
+      ]
+    }
+  ]
+}

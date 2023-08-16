@@ -1,0 +1,21 @@
+﻿@model List<Customer>
+<h1> Kundenliste</h1>
+<table style="width:100%">
+    <tr>
+        <th>Kundenummer</th>
+        <th>Anzahl der TelemetryId's</th>
+    </tr>
+    @foreach (Customer kunde in Model)
+    {
+        <tr>
+            <td>
+                <a href="/auswertung/customerdetails/@kunde.KundenNr">
+                @kunde.KundenNr
+                </a>
+                
+            </td>
+            <td>@kunde.TelemetryIdCount</td>
+        </tr>
+        
+    }
+</table>
